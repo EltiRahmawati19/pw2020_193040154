@@ -1,0 +1,19 @@
+.img {
+    height : 200px;
+    width: 200px;
+}
+#field{
+    
+    background-color : lightskyblue;
+    font-size : 20px;
+    
+}
+.container{
+    font-size : 15px;
+    text-align : center;
+    margin : 50px;
+}
+h1{
+ text-align : center;
+ font-style: oblique;
+}
