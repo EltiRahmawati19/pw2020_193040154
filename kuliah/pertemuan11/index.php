@@ -52,6 +52,5 @@ if(isset($_POST['cari'])) {
    
   </table>
 
-</body>
 
 </html>
