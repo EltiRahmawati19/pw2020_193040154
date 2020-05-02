@@ -1,0 +1,32 @@
+.container {
+    text-align: center;
+    background-image: url(../assets/img/cork-board.png);
+    padding-bottom: 1000px;
+padding: 50px 100px 1000px 100px;
+    
+}
+.daftar{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    
+   
+}
+.merk {
+    color: white;
+    text-shadow: black 3px 3px 3px;
+
+}
+.add {
+    background-color: teal;
+    color: white;
+    font-size: 20px;
+}
+h1{
+    text-align: center;
+    font-size: 100px;
+    color: white;
+    text-shadow: black 5px 5px 5px;
+    font-family: fantasy;
+    
+}

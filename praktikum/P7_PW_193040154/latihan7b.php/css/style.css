@@ -1,0 +1,22 @@
+
+.container{
+    font-size : 15px;
+    text-align : center;
+    background-color: chocolate;
+    padding-bottom: 1000px;
+padding: 50px 100px 1000px 100px;
+color: white;
+font-size: 20px;
+text-shadow: black 3px 3px 3px;
+    
+    
+}
+.tombol_kembali{
+    background-color: brown;
+    font-size: 15px;
+    color: white;
+}
+
+h1{
+ text-align : center;
+}
