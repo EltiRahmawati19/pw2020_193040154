@@ -29,7 +29,7 @@ if (isset($_POST['login'])) {
 
   if (mysqli_num_rows($cek_user) > 0) {
     $row = mysqli_fetch_assoc($cek_user);
-    if ($password == $row['password']) {
+    if (password_verify($password, $row['password'])) {
       $_SESSION['username'] = $_POST['username'];
       $_SESSION['hash'] = hash('sha256', $row['id'], false);
     }
