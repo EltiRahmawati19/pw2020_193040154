@@ -28,6 +28,7 @@ if (isset($_POST['ubah'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+  <link rel="stylesheet" href="css/style5.css">
 
 <head>
   <meta charset="UTF-8">
@@ -36,48 +37,34 @@ if (isset($_POST['ubah'])) {
 </head>
 
 <body>
-  <h3>Form Ubah Data Mahasiswa</h3>
-  <form action="" method="POST" enctype="multipart/form-data">
-    <input type="hidden" name="id" value="<?= $m['id']; ?>">
-
-    <ul>
-      <li>
-        <label>
-          Nama :
-          <input type="text" name="nama" autofocus required value="<?= $m['nama']; ?>">
-        </label>
-      </li><br>
-      <li>
-        <label>
-          NRP :
-          <input type="text" name="nrp" autofocus required value="<?= $m['nrp']; ?>">
-        </label>
-      </li><br>
-      <li>
-        <label>
-          Email :
-          <input type="text" name="email" autofocus required value="<?= $m['email']; ?>">
-        </label>
-      </li><br>
-      <li>
-        <label>
-          Jurusan :
-          <input type="text" name="jurusan" autofocus required value="<?= $m['jurusan']; ?>">
-        </label>
-      </li><br>
-      <li>
+  <div class="register-box">
+    <h1>Form Ubah Data Mahasiswa</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="id" value="<?= $m['id']; ?>">
+      <div class="textbox">
+        <input type="text" name="nama" placeholder="Nama" required value="<?= $m['nama']; ?>">
+      </div>
+      <div class="textbox">
+        <input type="text" name="nrp" placeholder="NRP" required value="<?= $m['nrp']; ?>">
+      </div>
+      <div class="textbox">
+        <input type="text" name="email" placeholder="Email" required value="<?= $m['email']; ?>">
+      </div>
+      <div class="textbox">
+        <input type="text" name="jurusan" placeholder="Jurusan" required value="<?= $m['jurusan']; ?>">
+      </div>
+      <label>
         <input type="hidden" name="gambar_lama" value="<?= $m['gambar']; ?>">
         <label>
-          Gambar :
           <input type="file" name="gambar" class="gambar" onchange="previewImage()">
-        </label>
-        <img src="img/<?= $m['gambar']; ?>" width="120" style="display: block;" class="img-preview">
-      </li><br>
-      <li>
-        <button type="submit" name="ubah">Ubah Data</button>
-      </li>
-    </ul>
-  </form>
+          <br><br>
+          <img src="img/<?= $m['gambar']; ?>" width="120" style="display: block;" class="img-preview" align="right">
+          <br><br>
+          <button type="submit" name="ubah" class="sub">Ubah Data</button>
+          </li>
+          </ul>
+    </form>
+  </div>
 
   <script src="js/script.js"></script>
 </body>

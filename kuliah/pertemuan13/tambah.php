@@ -20,6 +20,7 @@ if (isset($_POST['tambah'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="css/style5.css">
 
 <head>
   <meta charset="UTF-8">
@@ -28,47 +29,34 @@ if (isset($_POST['tambah'])) {
 </head>
 
 <body>
-  <h3>Form Tambah Data Mahasiswa</h3>
-  <form action="" method="POST" enctype="multipart/form-data">
+  <div class="register-box">
+    <h1>Form Tambah Data Mahasiswa</h1>
+    <form action="" method="POST" enctype="multipart/form-data">
+      <div class="textbox">
+        <input type="text" name="nama" placeholder="Nama" autofocus required>
+      </div>
+      <div class="textbox">
+          <input type="text" name="nrp" placeholder="NRP" autofocus required>
+      </div>
+      <div class="textbox">  
+          <input type="text" name="email" placeholder="Email" autofocus required>
+      </div>
+      <div class="textbox">
+          <input type="text" name="jurusan" placeholder="Jurusan" autofocus required>
+      </div>
 
-    <ul>
-      <li>
-        <label>
-          Nama :
-          <input type="text" name="nama" autofocus required>
-        </label>
-      </li><br>
-      <li>
-        <label>
-          NRP :
-          <input type="text" name="nrp" autofocus required>
-        </label>
-      </li><br>
-      <li>
-        <label>
-          Email :
-          <input type="text" name="email" autofocus required>
-        </label>
-      </li><br>
-      <li>
-        <label>
-          Jurusan :
-          <input type="text" name="jurusan" autofocus required>
-        </label>
-      </li><br>
-      <li>
-        <label>
-          Gambar :
-          <input type="file" name="gambar" class="gambar" onchange="previewImage()">
-        </label>
-        <br><br>
-        <img src="img/nonephoto.jpg" width="120" style="display: block;" class="img-preview">
-      </li><br>
-      <li>
-        <button type="submit" name="tambah">Tambah Data</button>
+      <label>
+        <input type="file" name="gambar" class="gambar" onchange="previewImage()">
+      </label>
+      <img src="img/nonephoto.jpg" width="120" style="display: block;" class="img-preview" align="right">
+      <br><br>
+      <button type="submit" name="tambah" class="sub">Tambah Data</button>
       </li>
-    </ul>
-  </form>
+      </ul>
+    </form>
+  </div>
+
+
 
   <script src="js/script.js"></script>
 </body>
