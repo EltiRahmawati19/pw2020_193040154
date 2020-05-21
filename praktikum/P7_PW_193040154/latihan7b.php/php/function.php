@@ -1,8 +1,8 @@
 <?php
 function koneksi()
 {
-  $conn =  mysqli_connect("localhost", "root", "") or die("koneksi ke DB gagal");
-  mysqli_select_db($conn, "tubes_193040154") or die("Database salah!");
+  $conn =  mysqli_connect("localhost", "pw19154", "#Akun#193040154#") or die("koneksi ke DB gagal");
+  mysqli_select_db($conn, "pw19154_tubes_193040154") or die("Database salah!");
 
   return $conn;
 }
@@ -63,17 +63,18 @@ function ubah($data)
   echo mysqli_error($conn);
   return mysqli_affected_rows($conn);
 }
-function registrasi($data) {
+function registrasi($data)
+{
   $conn = koneksi();
   $username = strtolower(stripcslashes($data['username']));
   $password = mysqli_real_escape_string($conn, $data['password']);
 
   $result = mysqli_query($conn, "SELECT username FROM user WHERE username = '$username'");
-  if(mysqli_fetch_assoc($result)) {
+  if (mysqli_fetch_assoc($result)) {
     echo "<script>
           alert('username sudah digunakan');
           </script>";
-          return false;
+    return false;
   }
 
   $password = password_hash($password, PASSWORD_DEFAULT);
@@ -83,6 +84,3 @@ function registrasi($data) {
 
   return mysqli_affected_rows($conn);
 }
-
-
-

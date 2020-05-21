@@ -2,7 +2,7 @@
 
 function koneksi()
 {
-  return mysqli_connect('localhost', 'root', '', 'pw_193040154');
+  return mysqli_connect('localhost', 'pw19154', '#Akun#193040154#', 'pw19154_pw_193040154');
 }
 
 function query($query)
@@ -100,20 +100,18 @@ function login($data)
   $username = htmlspecialchars($data['username']);
   $password = htmlspecialchars($data['password']);
 
-   if ($user = query("SELECT * FROM user WHERE username = '$username'")) {
+  if ($user = query("SELECT * FROM user WHERE username = '$username'")) {
 
-    if(password_verify($password, $user['password'])) {
+    if (password_verify($password, $user['password'])) {
       $_SESSION['login'] = true;
-    header("Location: index.php");
-    exit;
+      header("Location: index.php");
+      exit;
     }
-    
-  } 
-    return [
-      'eror' => true,
-      'pesan' => 'username / password salah !'
-    ];
-  
+  }
+  return [
+    'eror' => true,
+    'pesan' => 'username / password salah !'
+  ];
 }
 function registrasi($data)
 {
